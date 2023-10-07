@@ -1,0 +1,153 @@
+#########################
+# libglfw.so.3
+#########################
+
+PATH /nix/store/sw6dywwgvalklwajvzjpgh2wwdn90cvj-glfw-3.3.8/lib/libglfw.so.3
+
+NAME libglfw.so.3
+NAME libglfw.so.3.3
+
+DEP librt.so.1
+DEP libm.so.6
+DEP libdl.so.2
+DEP libX11.so.6
+DEP libXrandr.so.2
+DEP libXinerama.so.1
+DEP libXcursor.so.1
+DEP libXi.so.6
+DEP libc.so.6
+
+SYM .text glfwCreateCursor
+SYM .text glfwCreateStandardCursor
+SYM .text glfwCreateWindow
+SYM .text glfwCreateWindowSurface
+SYM .text glfwDefaultWindowHints
+SYM .text glfwDestroyCursor
+SYM .text glfwDestroyWindow
+SYM .text glfwExtensionSupported
+SYM .text glfwFocusWindow
+SYM .text glfwGetClipboardString
+SYM .text glfwGetCurrentContext
+SYM .text glfwGetCursorPos
+SYM .text glfwGetEGLContext
+SYM .text glfwGetEGLDisplay
+SYM .text glfwGetEGLSurface
+SYM .text glfwGetError
+SYM .text glfwGetFramebufferSize
+SYM .text glfwGetGamepadName
+SYM .text glfwGetGamepadState
+SYM .text glfwGetGammaRamp
+SYM .text glfwGetGLXContext
+SYM .text glfwGetGLXWindow
+SYM .text glfwGetInputMode
+SYM .text glfwGetInstanceProcAddress
+SYM .text glfwGetJoystickAxes
+SYM .text glfwGetJoystickButtons
+SYM .text glfwGetJoystickGUID
+SYM .text glfwGetJoystickHats
+SYM .text glfwGetJoystickName
+SYM .text glfwGetJoystickUserPointer
+SYM .text glfwGetKey
+SYM .text glfwGetKeyName
+SYM .text glfwGetKeyScancode
+SYM .text glfwGetMonitorContentScale
+SYM .text glfwGetMonitorName
+SYM .text glfwGetMonitorPhysicalSize
+SYM .text glfwGetMonitorPos
+SYM .text glfwGetMonitors
+SYM .text glfwGetMonitorUserPointer
+SYM .text glfwGetMonitorWorkarea
+SYM .text glfwGetMouseButton
+SYM .text glfwGetOSMesaColorBuffer
+SYM .text glfwGetOSMesaContext
+SYM .text glfwGetOSMesaDepthBuffer
+SYM .text glfwGetPhysicalDevicePresentationSupport
+SYM .text glfwGetPrimaryMonitor
+SYM .text glfwGetProcAddress
+SYM .text glfwGetRequiredInstanceExtensions
+SYM .text glfwGetTime
+SYM .text glfwGetTimerFrequency
+SYM .text glfwGetTimerValue
+SYM .text glfwGetVersion
+SYM .text glfwGetVersionString
+SYM .text glfwGetVideoMode
+SYM .text glfwGetVideoModes
+SYM .text glfwGetWindowAttrib
+SYM .text glfwGetWindowContentScale
+SYM .text glfwGetWindowFrameSize
+SYM .text glfwGetWindowMonitor
+SYM .text glfwGetWindowOpacity
+SYM .text glfwGetWindowPos
+SYM .text glfwGetWindowSize
+SYM .text glfwGetWindowUserPointer
+SYM .text glfwGetX11Adapter
+SYM .text glfwGetX11Display
+SYM .text glfwGetX11Monitor
+SYM .text glfwGetX11SelectionString
+SYM .text glfwGetX11Window
+SYM .text glfwHideWindow
+SYM .text glfwIconifyWindow
+SYM .text glfwInit
+SYM .text glfwInitHint
+SYM .text glfwJoystickIsGamepad
+SYM .text glfwJoystickPresent
+SYM .text glfwMakeContextCurrent
+SYM .text glfwMaximizeWindow
+SYM .text glfwPollEvents
+SYM .text glfwPostEmptyEvent
+SYM .text glfwRawMouseMotionSupported
+SYM .text glfwRequestWindowAttention
+SYM .text glfwRestoreWindow
+SYM .text glfwSetCharCallback
+SYM .text glfwSetCharModsCallback
+SYM .text glfwSetClipboardString
+SYM .text glfwSetCursor
+SYM .text glfwSetCursorEnterCallback
+SYM .text glfwSetCursorPos
+SYM .text glfwSetCursorPosCallback
+SYM .text glfwSetDropCallback
+SYM .text glfwSetErrorCallback
+SYM .text glfwSetFramebufferSizeCallback
+SYM .text glfwSetGamma
+SYM .text glfwSetGammaRamp
+SYM .text glfwSetInputMode
+SYM .text glfwSetJoystickCallback
+SYM .text glfwSetJoystickUserPointer
+SYM .text glfwSetKeyCallback
+SYM .text glfwSetMonitorCallback
+SYM .text glfwSetMonitorUserPointer
+SYM .text glfwSetMouseButtonCallback
+SYM .text glfwSetScrollCallback
+SYM .text glfwSetTime
+SYM .text glfwSetWindowAspectRatio
+SYM .text glfwSetWindowAttrib
+SYM .text glfwSetWindowCloseCallback
+SYM .text glfwSetWindowContentScaleCallback
+SYM .text glfwSetWindowFocusCallback
+SYM .text glfwSetWindowIcon
+SYM .text glfwSetWindowIconifyCallback
+SYM .text glfwSetWindowMaximizeCallback
+SYM .text glfwSetWindowMonitor
+SYM .text glfwSetWindowOpacity
+SYM .text glfwSetWindowPos
+SYM .text glfwSetWindowPosCallback
+SYM .text glfwSetWindowRefreshCallback
+SYM .text glfwSetWindowShouldClose
+SYM .text glfwSetWindowSize
+SYM .text glfwSetWindowSizeCallback
+SYM .text glfwSetWindowSizeLimits
+SYM .text glfwSetWindowTitle
+SYM .text glfwSetWindowUserPointer
+SYM .text glfwSetX11SelectionString
+SYM .text glfwShowWindow
+SYM .text glfwSwapBuffers
+SYM .text glfwSwapInterval
+SYM .text glfwTerminate
+SYM .text glfwUpdateGamepadMappings
+SYM .text glfwVulkanSupported
+SYM .text glfwWaitEvents
+SYM .text glfwWaitEventsTimeout
+SYM .text glfwWindowHint
+SYM .text glfwWindowHintString
+SYM .text glfwWindowShouldClose
+
