@@ -1,0 +1,5 @@
+
+
+
+type SDL_Window = opaque{};
+type SDL_Surface = opaque{};

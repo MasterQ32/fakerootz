@@ -1,0 +1,106 @@
+type SDL_TouchID = i64; // TODO: Unique integer!
+type SDL_FingerID = i64; // TODO: Unique integer!
+
+type SDL_TouchDeviceType = enum
+{
+    INVALID = -1,
+
+    /// touch screen with window-relative coordinates
+    DIRECT,
+
+    /// trackpad with absolute device coordinates
+    INDIRECT_ABSOLUTE,
+
+    /// trackpad with screen cursor-relative coordinates
+    INDIRECT_RELATIVE
+};
+
+type SDL_Finger = struct
+{
+    id: SDL_FingerID,
+    x: f32,
+    y: f32,
+    pressure: f32,
+};
+
+// /// Used as the device ID for mouse events simulated with touch input
+// TODO: constexpr SDL_TOUCH_MOUSEID =  ((Uint32)-1);
+
+// /// Used as the SDL_TouchID for touch events simulated with mouse input
+// TODO: constexpr SDL_MOUSE_TOUCHID =  ((Sint64)-1);
+
+
+///
+/// Get the number of registered touch devices.
+///
+/// On some platforms SDL first sees the touch device if it was actually used.
+/// Therefore SDL_GetNumTouchDevices() may return 0 although devices are
+/// available. After using all devices at least once the number will be
+/// correct.
+///
+/// This was fixed for Android in SDL 2.0.1.
+///
+/// \returns the number of registered touch devices.
+///
+/// \since This function is available since SDL 2.0.0.
+///
+/// \sa SDL_GetTouchDevice
+///
+fn SDL_GetNumTouchDevices() c_int;
+
+///
+/// Get the touch ID with the given index.
+///
+/// \param index the touch device index
+/// \returns the touch ID with the given index on success or 0 if the index is
+///          invalid; call SDL_GetError() for more information.
+///
+/// \since This function is available since SDL 2.0.0.
+///
+/// \sa SDL_GetNumTouchDevices
+///
+fn SDL_GetTouchDevice(index: c_int) SDL_TouchID;
+
+///
+/// Get the touch device name as reported from the driver or NULL if the index
+/// is invalid.
+///
+/// \since This function is available since SDL 2.0.22.
+///
+fn SDL_GetTouchName(index: c_int) ?[*:0]const c_char;
+
+///
+/// Get the type of the given touch device.
+///
+/// \since This function is available since SDL 2.0.10.
+///
+fn SDL_GetTouchDeviceType(touchID: SDL_TouchID) SDL_TouchDeviceType;
+
+///
+/// Get the number of active fingers for a given touch device.
+///
+/// \param touchID the ID of a touch device
+/// \returns the number of active fingers for a given touch device on success
+///          or 0 on failure; call SDL_GetError() for more information.
+///
+/// \since This function is available since SDL 2.0.0.
+///
+/// \sa SDL_GetTouchFinger
+///
+fn SDL_GetNumTouchFingers(touchID: SDL_TouchID) c_int;
+
+///
+/// Get the finger object for specified touch device ID and finger index.
+///
+/// The returned resource is owned by SDL and should not be deallocated.
+///
+/// \param touchID the ID of the requested touch device
+/// \param index the index of the requested finger
+/// \returns a pointer to the SDL_Finger object or NULL if no object at the
+///          given ID and index could be found.
+///
+/// \since This function is available since SDL 2.0.0.
+///
+/// \sa SDL_RecordGesture
+///
+fn SDL_GetTouchFinger(touchID: SDL_TouchID, index: c_int) ?*SDL_Finger;
